@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventEase - Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+
+        <!-- Welcome Page -->
+        <section id="welcome-page" class="page active">
+            <h1 class="title">EventEase</h1>
+            <p class="tagline">"Turning Moments into Memories — Effortlessly"</p>
+            <button class="btn-primary" onclick="showPage('client-page')">Register New Event</button>
+            <button class="btn-secondary" onclick="showPage('login-page')">Participant Login</button>
+            <button class="btn-secondary" onclick="showPage('about-page')">About / Credits</button>
+        </section>
+
+        <!-- Client Page -->
+        <section id="client-page" class="page">
+            <h2>Client Details</h2>
+            <form id="client-form">
+                <label>Full Name: <input type="text" id="client-name" required></label>
+                <label>Phone Number: <input type="text" id="client-phone" required></label>
+                <label>Email ID: <input type="email" id="client-email" required></label>
+                <label>Address: <input type="text" id="client-address" required></label>
+                <label>City: <input type="text" id="client-city" required></label>
+                <label>Registration Date: <input type="date" id="client-date" required></label>
+                <button type="button" class="btn-primary" onclick="showPage('event-page')">Next ▶</button>
+            </form>
+        </section>
+
+        <!-- Event Page -->
+        <section id="event-page" class="page">
+            <h2>Event Details</h2>
+            <form id="event-form">
+                <label>Event Type:
+                    <select id="event-type">
+                        <option>Wedding</option>
+                        <option>Corporate Event</option>
+                        <option>Birthday</option>
+                        <option>Concert</option>
+                        <option>Exhibition</option>
+                    </select>
+                </label>
+                <label>Venue Type:
+                    <select id="venue-type">
+                        <option>Indoor</option>
+                        <option>Outdoor</option>
+                        <option>Beachside</option>
+                        <option>Resort</option>
+                        <option>Banquet</option>
+                    </select>
+                </label>
+                <label>Event Date: <input type="date" id="event-date" required></label>
+                <label>Guests: <input type="number" id="guest-count" min="10" max="1000" step="10" value="50"></label>
+                <label>Budget: <input type="number" id="event-budget" min="10000" step="10000" value="100000"></label>
+                <button type="button" class="btn-primary" onclick="showPage('services-page')">Next ▶</button>
+            </form>
+        </section>
+
+        <!-- Services Page -->
+        <section id="services-page" class="page">
+            <h2>Services</h2>
+            <form id="service-form">
+                <label><input type="checkbox" value="Decoration"> Decoration</label>
+                <label><input type="checkbox" value="Catering"> Catering</label>
+                <label><input type="checkbox" value="Music / DJ"> Music / DJ</label>
+                <label><input type="checkbox" value="Photography"> Photography</label>
+                <label><input type="checkbox" value="Lighting"> Lighting</label>
+                <button type="button" class="btn-primary" onclick="showPage('login-page')">Next ▶</button>
+            </form>
+        </section>
+
+        <!-- Login Page -->
+        <section id="login-page" class="page">
+            <h2>Participant Login</h2>
+            <form id="login-form" onsubmit="login(event)">
+                <label>Username: <input type="text" id="username" required></label>
+                <label>Password: <input type="password" id="password" required></label>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </section>
+
+        <!-- Dashboard Page -->
+        <section id="dashboard-page" class="page">
+            <h2>Participant Dashboard</h2>
+            <table id="participant-table">
+                <thead>
+                    <tr><th>Name</th><th>Category</th><th>Role</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button class="btn-primary" onclick="addParticipant()">Add Participant</button>
+            <button class="btn-primary" onclick="showPage('summary-page')">View Event Summary</button>
+        </section>
+
+        <!-- Summary Page -->
+        <section id="summary-page" class="page">
+            <h2>Event Summary</h2>
+            <textarea id="summary" readonly></textarea>
+            <button class="btn-primary" onclick="finish()">Finish & Exit</button>
+        </section>
+
+        <!-- About Page -->
+        <section id="about-page" class="page">
+            <h2>About / Credits</h2>
+            <p>
+                EventEase - Event Management System<br><br>
+                Mini Project for Advanced Programming Practices<br>
+                Developed by: <b>[Your Name]</b><br>
+                Faculty: [Faculty Name]<br>
+                Year: 2025<br><br>
+                Features:<br>
+                - Client & Event Registration<br>
+                - Participant Login System<br>
+                - Dashboard Management<br>
+                - Event Summary Generation<br><br>
+                Turning Moments Into Memories — Effortlessly.
+            </p>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

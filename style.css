@@ -1,0 +1,104 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#main-container {
+    width: 800px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+h1.title {
+    color: #2850b4;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2850b4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+label {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+input, select, textarea {
+    width: 55%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #2850b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background-color: #1e3d8f;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+}
+
+#participant-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+#participant-table th, #participant-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+#summary {
+    width: 80%;
+    height: 300px;
+    margin: 20px auto;
+    display: block;
+}
